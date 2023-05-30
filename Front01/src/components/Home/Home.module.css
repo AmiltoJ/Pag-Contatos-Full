@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+    height: 100vh;
+  }
+  .title {
+    color: #fff;
+    font-size: 3rem;
+  }
+  .controles {
+    color: #321cf1;
+    margin-left: 4rem;
+    font-size: 2rem;
+  }
+  .contatos {
+    flex-direction: column;
+    margin-left: 20rem;
+    background-color: #025568;
+    border-radius: 5 ;
+    margin-top: 25rem;
+  }
+  .headerContatos {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding-bottom: 1rem;
+  
+  }
+  .buttons {
+    margin-top: 1rem;
+    margin-left: 15rem;
+  }
+  .buttom {
+    height: 3.4rem;
+    width:  3.4rem;
+    align-items: center;
+     background-color: #540a0a;
+     color: #fff;
+     border-width: 0.1rem;
+     border-color: #ff01c0;
+     margin-left: 1rem;
+     border-radius: 5px;
+     font-size: 1.7rem;
+     padding-top: 0.3rem;
+     box-shadow: 1px 2px 5px #87b10a; 
+  }
+  .buttom:hover{
+    box-shadow: 1px 2px 9px #01eeff;
+  }
+  .pesquisa {
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border: transparent;
+    background-color: #540a0a;
+    margin-right: 2rem;
+    
+  }
+  .buttomPesquisa {
+    background-color: #540a0a;
+    height: 3.3rem;
+    width: 5rem;
+    border: transparent;
+     color: #fff;
+     font-size: 1.5rem;
+     
+  }
+  .inputPesquisa {
+  background-color: #540a0a;
+  height: 3.4rem;
+  width: 42rem;
+  border:transparent;
+     font-size: medium;
+     color: #fff;
+  
+  }
+  .listaContatos {
+    background-color: var(--color-bg-dark);
+    padding: 2rem;
+    
+  }
+  
+  .listaCatalogo {
+    display: flex;
+    flex:1;
+    flex-direction: row;
+  }
+  .letraCatalogo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 5px;
+    background-color: var(--color-bg-dark);
+    border: 1px solid #ff01c0;
+    box-shadow: 1px 2px 5px #87b10a;
+    font-size: 2rem;
+    margin-right: 4rem;
+    margin-top: 4rem;
+    text-align: center;
+    padding-top: 0.2rem;
+    color: #01eeff
+  }

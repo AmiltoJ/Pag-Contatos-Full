@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.title{
+  color: #fff;
+  font-size: 3rem;
+}
+.cadastro{
+  color: #fff;
+  align-self: 2rem;
+}

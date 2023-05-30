@@ -1,0 +1,29 @@
+### Buscar todo os ID
+GET http://localhost:3333/user/
+
+### Buscar ID especifico
+GET http://localhost:3333/user/02d29b7f-146e-41b6-ae67-dcc82f902ff2
+
+### Inserir Informação no banco
+POST http://localhost:3333/user/
+content-type: application/json
+
+{
+    "name": "FEMA 2356",
+    "avatar": "fema@fema.com",
+    "numero": "XXX"
+}
+
+### Deletar um usuario pelo ID no banco
+DELETE  http://localhost:3333/user/6e6db009-d496-48dd-b2a8-4e0b2fbb5ee0
+
+### Atualizar um usuario pelo ID no Banco
+PUT  http://localhost:3333/user/1fbb9380-a094-4503-a255-db7a2f98a561
+content-type: application/json
+
+{
+    "name": "Juninho arasta",
+    "avatar":"XXX",
+    "numero": "111"
+}
+
