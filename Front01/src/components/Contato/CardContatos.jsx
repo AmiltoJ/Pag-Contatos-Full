@@ -23,14 +23,14 @@ export async function Update(user) {
   }else{
     console.log("função alterar id: " + cache);
 
-    const nomeCompleto = `${user.name.first} ${user.name.last}`;
+    const Fullname = `${user.name.first} ${user.name.last}`;
     const avatar = user.picture.large;
-    const cell = user.cell;
+    const Phone = user.cell;
     
     await server.put(`user/${cache}`, {
-    name: nomeCompleto,
+    name: Fullname,
     avatar: avatar,
-    numero: cell,
+    numero: Phone,
     });
   }
 

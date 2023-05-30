@@ -37,14 +37,14 @@ export function Home() {
 
    const user = resultAPI.data.results[0];
 
-   const nomeCompleto = `${user.name.first} ${user.name.last}`;
+   const Fullname = `${user.name.first} ${user.name.last}`;
    const avatar = user.picture.large;
-   const cell = user.cell;
+   const Phone = user.cell;
    
    await server.post("user/", {
-   name: nomeCompleto,
+   name: Fullname,
    avatar: avatar,
-   celular: cell,
+   celular: Phone,
    });
 
    Load();
@@ -111,7 +111,7 @@ export function Home() {
                 <CardContato key= {index} 
                 avatar= {person.avatar}
                 name= {person.name}
-                celular= {person.celular}
+                numero= {person.numero}
 
                 id= {person.id}
                 />

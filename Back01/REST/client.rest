@@ -9,20 +9,20 @@ POST http://localhost:3333/user/
 content-type: application/json
 
 {
-    "name": "FEMA 2356",
+    "name": "FEMA 1",
     "avatar": "fema@fema.com",
     "numero": "XXX"
 }
 
 ### Deletar um usuario pelo ID no banco
-DELETE  http://localhost:3333/user/6e6db009-d496-48dd-b2a8-4e0b2fbb5ee0
+DELETE  http://localhost:3333/user/37362e02-1267-480d-bbe8-04f3f9365a40
 
 ### Atualizar um usuario pelo ID no Banco
-PUT  http://localhost:3333/user/1fbb9380-a094-4503-a255-db7a2f98a561
+PUT  http://localhost:3333/user/356d4072-9f7e-4c5b-a336-b5e02a8c36f8
 content-type: application/json
 
 {
-    "name": "Juninho arasta",
+    "name": "Juninho Arasta",
     "avatar":"XXX",
     "numero": "111"
 }
