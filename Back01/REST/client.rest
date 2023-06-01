@@ -1,28 +1,17 @@
-### Buscar todo os ID
-GET http://localhost:3333/user/
+### Buscar todo os ID GET http://localhost:3333/user/
 
-### Buscar ID especifico
-GET http://localhost:3333/user/02d29b7f-146e-41b6-ae67-dcc82f902ff2
+### Buscar ID especifico GET http://localhost:3333/user/2e794ad6-c8c6-4527-8bab-41a407ba6632
 
-### Inserir Informação no banco
-POST http://localhost:3333/user/
-content-type: application/json
+### Inserir Informação no banco POST http://localhost:3333/user/ content-type: application/json
 
 {
-    "name": "FEMA 1",
-    "avatar": "fema@fema.com",
-    "numero": "XXX"
+"name": "FEMA 2", "avatar": "fema@fema.com", "celular": "XXX"
 }
 
-### Deletar um usuario pelo ID no banco
-DELETE  http://localhost:3333/user/33792419-f948-43bb-be91-b4d90f9c18f9
-### Atualizar um usuario pelo ID no Banco
-PUT  http://localhost:3333/user/356d4072-9f7e-4c5b-a336-b5e02a8c36f8
-content-type: application/json
+### Deletar um usuario pelo ID no banco DELETE http://localhost:3333/user/87ef9cf8-aab4-47ec-ae88-626acf101352
+
+### Atualizar um usuario pelo ID no Banco PUT http://localhost:3333/user/1fbb9380-a094-4503-a255-db7a2f98a561 content-type: application/json
 
 {
-    "name": "Juninho Arasta",
-    "avatar":"XXX",
-    "numero": "111"
+"name": "Adrino Silva Santos", "avatar":"XXX", "celular": "111"
 }
-
