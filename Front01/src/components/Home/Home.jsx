@@ -1,9 +1,9 @@
-//import style
+
 import style from "./Home.module.css";
-//imports cards
+
 import { CardPerson } from "../User/CardPerson";
 import { CardContato, Delete, Update } from "../Contato/CardContatos";
-//imports Icons
+
 import {BsFillTrash3Fill } from "react-icons/bs";
 import {IoPencil, IoSearchOutline, IoAdd } from "react-icons/io5";
 

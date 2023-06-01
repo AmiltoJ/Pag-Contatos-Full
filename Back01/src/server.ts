@@ -13,5 +13,5 @@ server.use(express.json());
 server.use(router);
 
 server.listen(port, () => {
-  console.log(`Server On- <(°-°)> - end: http://localhost:${port}`);
+  console.log(`Server On Gurizada do MALLLLLLLLLL - end: http://localhost:${port}`);
 });

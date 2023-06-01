@@ -25,13 +25,13 @@ userRoute.get("/:id", (request, response) => {
 });
 
 userRoute.post("/", (request, response) => {
-  const { name, avatar, celular } = request.body;
+  const { name, avatar, telefone } = request.body;
 
   const user = {
     id: randomUUID(),
     name,
     avatar,
-    celular
+    telefone
   };
 
   console.log(` --> Contato:\n${JSON.stringify(user, null, 2)} `);
@@ -59,15 +59,16 @@ userRoute.delete("/:id", (request, response) => {
 
 userRoute.put("/:id", (request, response) => {
   const { id } = request.params;
-  const { name, avatar, celular } = request.body;
+  const { name, avatar, telefone } = request.body;
 
   const userExist: any = database.select(table, id);
   if (userExist === undefined)
     return response.status(400).json({ msg: "Contato não encontrado!" });
 
-  database.update(table, id, { name, avatar, celular });
+  database.update(table, id, { name, avatar, telefone });
 
   response.status(201).json({ msg: `O ID: {${id}} foi alterado banco` });
 });
 
 export { userRoute };
+
