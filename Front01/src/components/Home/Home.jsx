@@ -57,6 +57,27 @@ export function Home() {
  Load();
  }
 
+ function Pesquisar() {
+  event.preventDefault();  
+
+  if (valor === '') { Load(); }
+  else{
+    console.log(`Nome procurado: ${valor}`);
+    let results = [];
+
+  persons.map((person => {
+
+    if(person.name.toLowerCase().includes(valor.toLowerCase())) {
+      results.push(person);
+      return
+    }
+  }))
+
+  console.log({results})
+  setPersons(results)
+  }
+}
+
  async function Editar() {
    event.preventDefault();
    
@@ -83,18 +104,19 @@ export function Home() {
       <div  className={style.controles}>
       <form >
       
-            <div className={style.headerContatos}>
-            <h1 className={style.title}>Meus contatos</h1>
-              <div  className={style.buttons}>
-              <button  className={style.buttom}> <IoAdd /> </button>
-              <button  className={style.buttom}> <IoPencil /> </button>
-              <button  className={style.buttom}> <BsFillTrash3Fill /> </button>
-            </div>
-            </div>
+      <div className={style.headerContatos}>
+        <h1 className={style.title}>Meus contatos</h1>
+        <div className={style.buttons}>
+            <button className={style.buttom} onClick={Adicionar}> <IoAdd /> </button>
+            <button className={style.buttom} onClick={Editar}> <IoPencil /> </button>
+            <button className={style.buttom} onClick={Deletar}> <BsFillTrash3Fill /> </button>
+        </div>
+        </div>
             
             <div className={style.pesquisa}>
             <button  className={style.buttomPesquisa}> <IoSearchOutline /> </button>
-            <input type='text' name='pesquisa' className={style.inputPesquisa}/>
+            <button className={style.buttomPesquisa} onClick={Pesquisar}> <IoSearchOutline /> </button>
+            <input type='text' name='pesquisa' className={style.inputPesquisa} placeholder="Busque pelo nome." value={valor} onChange={() => { setValor(event.target.value) }} />
             </div>
             
             </form>
@@ -108,12 +130,12 @@ export function Home() {
 
   {
               persons.map((person, index) => (
-                <CardContato key= {index} 
-                avatar= {person.avatar}
-                name= {person.name}
-                numero= {person.numero}
+                <CardContato key = {index} 
+                avatar = {person.avatar}
+                name = {person.name}
+                numero = {person.numero}
 
-                id= {person.id}
+                id = {person.id}
                 />
 
               ))
