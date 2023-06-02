@@ -1,5 +1,5 @@
 import React from "react";
-import { server, api } from "../../api/axios";
+import { server} from "../../api/axios";
 
 import styleContato from "./CardContatos.module.css";
 
@@ -37,17 +37,17 @@ export async function Update(user) {
   }
 
 
-export function CardContato({avatar, name, numero, id }) {
+export function CardContato({  avatar, name, celular, id}) {
   function Cache(id) {
     cache = id;
     console.log("Cache definido para " + cache);
   }
 
   return (
-    <div className={styleContato.card}>
+    <div className={styleContato.card} onClick={() => {Cache(id)}}>
       <img className={styleContato.avatar} src={avatar} alt="Avatar" />
       <p className={styleContato.p1}>{name}</p>
-      <p className={styleContato.p2}>{numero}</p>
-    </div>
+      <p className={styleContato.p2}>{celular}</p>
+      </div>
   );
 }
