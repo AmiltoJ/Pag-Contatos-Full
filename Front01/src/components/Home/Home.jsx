@@ -22,7 +22,8 @@ export function Home() {
 }, []);
 
  async function Load() {
-   const temp = await server.get("user/");
+   
+  const temp = await server.get("user/");
    console.log(temp)
 
    setPersons(temp.data);
@@ -116,7 +117,7 @@ export function Home() {
             
             <div className={style.pesquisa}>
             <button  className={style.buttomPesquisa}onClick={Pesquisar}> <IoSearchOutline /> </button>
-            <input type='text' name='pesquisa' value={valor} className={style.inputPesquisa}/>
+            <input type='text' name='pesquisa' className={style.inputPesquisa} value={valor} onChange={() => { setValor(event.target.value) }}  />
             </div>
             
             </form>
