@@ -116,7 +116,7 @@ export function Home() {
             <div className={style.pesquisa}>
             <button  className={style.buttomPesquisa}> <IoSearchOutline /> </button>
             <button className={style.buttomPesquisa} onClick={Pesquisar}> <IoSearchOutline /> </button>
-            <input type='text' name='pesquisa' className={style.inputPesquisa} placeholder="Busque pelo nome." value={valor} onChange={() => { setValor(event.target.value) }} />
+            <input type='text' name='pesquisa' className={style.inputPesquisa}/>
             </div>
             
             </form>
